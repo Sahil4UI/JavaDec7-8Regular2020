@@ -31,5 +31,12 @@ public class Operators {
 //		bitwise not->~
 //		System.out.println(~-5);
 		
+//		unary operator
+		int x = 20;
+//		Pre increment -> ++x , post increment
+//		System.out.println(++x);
+		System.out.println(x++);
+		System.out.println(x);
+		
 	}
 }
