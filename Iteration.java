@@ -36,17 +36,45 @@ public class Iteration {
 //			result+=i;
 //		}
 //		System.out.println(result);
+		
+//		int isPrime = 1;
+//		
+//		for (int i=2;i<=x-1;i++)
+//		{
+//			if (x%i==0)
+//			{
+//				isPrime = 0;
+//				break;
+//			}
+//		}
+//		
+//		if (isPrime == 1)
+//		{
+//			System.out.println("prime");
+//		}
+//		else {
+//			System.out.println("Not Prime");
+//		}
 		Scanner obj = new Scanner(System.in);
 		System.out.println("Enter number : ");
 		int x = obj.nextInt();
+		int temp = x;
+		
 		int result = 0;
 		
 		for (int i=1;x>0;x = x/10)
 		{
 			int rem = x%10;
-			result+=rem;
+			result=result+rem*rem*rem;
 		}
-		System.out.println(result);
+		
+		if (temp == result)
+		{
+			System.out.println("armstrong");
+		}
+		else {
+			System.out.println("not armstrong");
+		}
 
 	}
 }
