@@ -107,12 +107,24 @@ class Nested{
         //     System.out.println(i);
         // }
 
-        int x =1;
-        while (x<=10)
-        {
-            System.out.println(x);
-            // x++;
-        }
-        
+        // int x =1;
+        // while (x<=10)
+        // {
+        //     System.out.println(x);
+        //     x++;
+        // }
+            int i=1;
+                 
+            while (i<=5)
+            {
+                int j=1;
+                while(j<=i)
+                {
+                    System.out.print(i);
+                    j++;
+                }
+                System.out.println();
+                i++;
+            }
         }
     }
