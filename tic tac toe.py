@@ -2,6 +2,7 @@ import java.util.*;
 
 public class TicTacToe {
 	static String [] board;
+	static String combinations[][]= {{"1","2","3"},{"4","5","6"},{"7","8","9"},{"1","4","7"},{"2","5","8"},{"3","6","9"},{"1","5","9"},{"3","5","7"}}; 
 	static void printBoard() {
 		System.out.println("|-----|-----|------|");
 		System.out.println("|  "+board[0]+"  |  "+board[1]+"  |  "+board[2]+"   |  ");
@@ -13,10 +14,42 @@ public class TicTacToe {
 		
 	}
 	
-	static void user_Move(String choice,int pos) {
+	static String user_Move(String choice,int pos) {
 		board[pos-1]=choice;
 		printBoard();
+		return checkWinner(pos,choice);
+		
+		
 	}
+    static String checkWinner(int pos, String choice) {
+
+		String win = "";
+    	for(int i=0;i<8;i++)
+		{
+			for(int j=0;j<3;j++)
+			{
+				if ((""+pos).equals(combinations[i][j]))
+				{
+					combinations[i][j]=choice;
+				}
+			}
+			
+		}
+			for(int a=0;a<8;a++)
+			{
+				
+				
+					if(combinations[a][0].equals(choice) && combinations[a][1].equals(choice) && combinations[a][2].equals(choice) )
+					{
+					return "Winner";
+				}
+			}
+		
+			return " ";
+	
+		
+	}
+
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 
@@ -37,8 +70,8 @@ public class TicTacToe {
 		while (true){
 			System.out.println("User Move : ");
 			int pos = sc.nextInt();
-			user_Move(user_choice,pos);
-				
+			String res=user_Move(user_choice,pos);
+			System.out.println(res);
 		}
 		
 		
