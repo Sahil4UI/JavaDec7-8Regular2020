@@ -3,23 +3,18 @@ public class TestStudent {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student obj = new Student();
-		obj.roll = 101;
-		obj.name="RAM";
-		obj.courseName="BCA";
-		obj.marks=90;
+		Student obj = new Student(101,"SAHIL","b.tECH",90);
+		
 		obj.print();
-
+		
+		obj.setCourseName("BCA");
+		
 		System.out.println("*****************************");
+		obj.print();
 		
-		Student obj1 = new Student();
-		obj1.roll = 102;
-		obj1.name="Shyam";
-		obj1.courseName="BTECH";
-		obj1.marks=20;
-		obj1.print();
-		
-	
+		String name = obj.getName();
+		System.out.println(name);
+
 	
 	}
 

@@ -40,7 +40,6 @@ public class RecursiveFunction {
 		}
 		
 		int rem = x%10;
-		
 		return rem+SOD(x/10);
 	}
 	
@@ -48,7 +47,7 @@ public class RecursiveFunction {
 	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
 //		Print(1);
-		int res= SOD(125);
+		int res= Power(5,3);
 		System.out.println(res);
 	}
 
