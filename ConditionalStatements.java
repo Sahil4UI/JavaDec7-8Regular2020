@@ -1,58 +1,29 @@
 
 public class ConditionalStatements {
+
 	public static void main(String[] args) {
-//		check wether no is even or odd
-		int number =15 ;
-//		if (number%2==0)
-//			{
-//			 System.out.println("Even Number");	
-//			}
-//		else {
-//			System.out.println("odd number");
-//		}
+//		Switch case
+		int day = 7;
 		
-//		if (number % 2==0)
-//		{
-//			System.out.println("Even");
-//		}
-//		else {
-//			System.out.println("Odd");
-//		}
+		switch (day) {
 		
-		
-//		
-		int a,b,c;
-		a=0;
-		b = -98;
-		c = 100;
-		if (a+b>c && b+c>a && c+a>b)
-		{
-			if (a==b && b==c && c==a)
-			{
-				System.out.println("Equilateral ");
-			}
-			else if (a==b || b==c || c==a)
-			{
-				System.out.println("Isoceles Traingle");
-			}
-			else {
-				System.out.println("Scalene Traingle");
-			}
-		}
-		else {
-			System.out.println("invalid traingle");
-		}
-		
-//		
-//		if (a>b && a>c){
-//			System.out.println("A is greator");
-//		}
-//		else if(b>c)
-//		{System.out.println("B is greator");
-//		
-//		}
-//		else {
-//			System.out.println("C is greatest");
-//		}
-}
+		case 1:System.out.println("Monday");
+				break;
+		case 2:System.out.println("Tuesday");
+				break;
+		case 3:System.out.println("Wednesday");
+				break;
+		case 4:System.out.println("Thursday");
+				break;
+		case 5:System.out.println("Friday");
+				break;
+		case 6:System.out.println("Saturday");
+				break;
+		case 7:System.out.println("Sunday");
+				break;
+				
+		default : System.out.println("Invalid Day");
+	}
+
+   }
 }
